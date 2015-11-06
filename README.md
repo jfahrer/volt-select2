@@ -1,6 +1,6 @@
 # Volt::Select2
 
-TODO: Write a gem description
+Simple wrapper to use select2 with Volt
 
 ## Installation
 
@@ -18,7 +18,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Initilize an select2 field:
+```
+<:select2:field include_blank="true" placeholder="Some placeholder" options="{{ ['test', 'test2'] }}" value="{{ params._selected }}" html_class="form-control">
+```
+* You can add a placeholder via the `placeholder` attr.
+* The `include_blank` attr includes a blank field and adds the `allowClear` option to the select2 field
+* `options` can either be an array or a hash (`Volt::Model`)
+* `value` will be set to the selected option
+
+For a select2 field with multiple option you can use the follow tag
+<:select2:field:multiple placeholder="Some placeholder" options="{{ ['test', 'test2'] }}" value="{{ params._selected }}" html_class="form-control" />
 
 ## Contributing
 
