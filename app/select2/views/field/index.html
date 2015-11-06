@@ -1,0 +1,22 @@
+<:Body> 
+  <select value="{{ attrs.value }}" class="{{ html_class }}">
+    {{ if selected_value.blank? }}
+      <option value="" selected>
+      </option>
+    {{ elsif include_blank? }}
+      <option value="">
+      </option>
+    {{ end }}
+    {{ options.each do |option| }}
+      {{ if option[:value] == selected_value }}
+        <option value="{{ option[:value] }}" selected="selected">
+          {{ option[:label] }}
+        </option>
+      {{ else }}
+        <option value="{{ option[:value] }}">
+          {{ option[:label] }}
+        </option>
+      {{ end }}
+    {{ end }}
+  </select>
+

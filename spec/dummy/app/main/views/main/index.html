@@ -3,4 +3,8 @@
 
 <:Body>
   <h1>Home</h1>
-
+  <:select2:field include_blank="true" placeholder="something" options="{{ ['test', 'test2'] }}" value="{{ params._selected1 }}" html_class="form-control" />
+  Selected: {{ params._selected1 }}
+  <hr>
+  <:select2:field:multiple placeholder="something" options="{{ ['test', 'test2'] }}" value="{{ params._selected2 }}" html_class="form-control" />
+  Selected: {{ params._selected2.inspect }}
