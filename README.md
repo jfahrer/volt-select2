@@ -28,7 +28,9 @@ Initilize an select2 field:
 * `value` will be set to the selected option
 
 For a select2 field with multiple option you can use the follow tag
+```
 <:select2:field:multiple placeholder="Some placeholder" options="{{ ['test', 'test2'] }}" value="{{ params._selected }}" html_class="form-control" />
+```
 
 ## Contributing
 
