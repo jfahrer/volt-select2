@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-Initilize an select2 field:
+Initialize a select2 field:
 ```
 <:select2:field include_blank="true" placeholder="Some placeholder" options="{{ ['test', 'test2'] }}" value="{{ params._selected }}" html_class="form-control">
 ```
@@ -34,7 +34,7 @@ For a select2 field with multiple option you can use the follow tag
 
 ## Contributing
 
-1. Fork it ( http://github.com/[my-github-username]/volt-select2/fork )
+1. Fork it ( http://github.com/jfahrer/volt-select2/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

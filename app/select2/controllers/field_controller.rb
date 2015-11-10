@@ -1,14 +1,26 @@
 module Select2
   class FieldController < Volt::ModelController
+    reactive_accessor :select_field
+
     def index_ready
-      `$(#{first_element}).select2(#{settings_from_attrs})`
+      setup_select2_field
     end
 
     def multiple_ready
-      `$(#{first_element}).select2(#{settings_from_attrs})`
+      setup_select2_field
     end
 
     private
+
+    def setup_select2_field
+      self.select_field = first_element
+      -> do
+        if attrs.options
+          puts "updating field"
+          `$(#{select_field}).select2(#{settings_from_attrs})`
+        end
+      end.watch!
+    end
 
     def options
       attrs.options.then do |options|
